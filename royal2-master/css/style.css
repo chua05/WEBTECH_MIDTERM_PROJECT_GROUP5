@@ -430,15 +430,15 @@ button:hover {
 }
 
 .security_section .security_img-box.i-box-1 {
-  background-image: url(../images/peps.jpg);
+  background-image: url(../images/pep2.jpg);
 }
 
 .security_section .security_img-box.i-box-2 {
-  background-image: url(../images/peps2.jpg);
+  background-image: url(../images/pep3.jpg);
 }
 
 .security_section .security_img-box.i-box-3 {
-  background-image: url(../images/peps3.jpg);
+  background-image: url(../images/pep.jpg);
 }
 
 .security_section .security_img-box a {
@@ -666,6 +666,9 @@ button:hover {
 }
 
 .info_section .news_container .social_container > div {
+  flex: 1; 
+  text-align: center; 
+  padding: 5px; 
 }
 
 /* end info section */
