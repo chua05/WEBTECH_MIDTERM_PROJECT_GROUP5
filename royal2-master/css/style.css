@@ -65,6 +65,8 @@ a:focus {
 }
 
 .navbar {
+  background-color: #2561db; /* Sample style */
+  padding: 10px 20px;
 }
 
 .nav-link:hover {
@@ -235,6 +237,8 @@ button:hover {
 
 /* welcome section */
 .welcome_section {
+  padding: 50px 0; 
+  background: #f5f5f5;
 }
 
 .welcome_section .col-md-6 {
@@ -385,6 +389,7 @@ button:hover {
 
 /* security section */
 .security_section {
+  background: rgb(246, 243, 243) !important;
 }
 
 .security_section h2 {
