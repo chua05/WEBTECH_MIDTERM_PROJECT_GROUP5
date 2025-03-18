@@ -1,33 +1,33 @@
-ddocument.addEventListener("DOMContentLoaded", function () {
-    document.getElementById("loginForm").addEventListener("submit", function (event) {
-        event.preventDefault();
+document.addEventListener("DOMContentLoaded", function() {
+    console.log("Script loaded successfully!");
 
-        const username = document.getElementById("username").value;
-        const password = document.getElementById("password").value;
-        const message = document.getElementById("message");
+    // Hanapin ang login form
+    let loginForm = document.getElementById("loginForm");
 
-        console.log("Entered Username:", username);
-        console.log("Entered Password:", password);
+    // Kung may nahanap na login form, i-attach ang event listener
+    if (loginForm) {
+        loginForm.addEventListener("submit", function(event) {
+            event.preventDefault(); // Pigilan ang default page reload
 
-        const users = {
-            "admin": "password",
-            "chua": "123456"
-        };
+            let username = document.getElementById("username").value;
+            let password = document.getElementById("password").value;
 
-        if (users[username] && users[username] === password) {
-            console.log("Login successful!");
+            console.log("Username:", username);
+            console.log("Password:", password);
 
-            message.textContent = "Login successful!";
-            message.style.color = "green";
-            localStorage.setItem("loggedInUser", username);
-
-            setTimeout(() => {
-                window.location.href = "index.html";
-            }, 1000);
-        } else {
-            console.log("Invalid login attempt");
-            message.textContent = "Invalid username or password.";
-            message.style.color = "red";
-        }
-    });
+            // Simple login check (replace this with real authentication)
+            if (username === "admin" && password === "password123") {
+                console.log("Login successful! Redirecting...");
+                window.location.href = "dashboard.html"; // Palitan ito kung iba ang page mo
+            } else {
+                console.log("Invalid login");
+                let message = document.getElementById("message");
+                message.textContent = "Invalid username or password.";
+                message.style.color = "red";
+            }
+        });
+    } else {
+        console.error("Login form not found!");
+    }
 });
+
